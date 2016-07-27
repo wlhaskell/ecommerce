@@ -35,6 +35,13 @@
     <%= f.label :category_id %><br>
     <%= f.collection_select :category_id, @categories, :id, :name %>
   </div>
+  <div class="field">
+    <%= f.label :brand %><br>
+    <%= f.text_field :brand %>
+  </div>
+  <div class="field">
+    <%= f.file_field :image %>
+  </div>
 
   <div class="actions">
     <%= f.submit %>

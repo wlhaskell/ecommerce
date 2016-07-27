@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'bootstrap-sass'
 gem 'better_errors'
 gem 'devise'
+
 gem 'carrierwave'
 gem 'mini_magick'
 

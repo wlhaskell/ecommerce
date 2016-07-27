@@ -1,4 +1,4 @@
 class Product < ActiveRecord::Base
-	belongs_to :category
 	mount_uploader :image, ImageUploader
+	belongs_to :category
 end

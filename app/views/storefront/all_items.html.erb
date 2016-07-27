@@ -1,0 +1,17 @@
+<h1>Welcome to Computers'n Stuff</h1>
+
+<div class="row">
+	<% @products.each_with_index do |product, n| %>
+		<div class="col-md-4">
+			<div class="well center-it">
+				<%= image_tag product.image.thumb.url %> 
+				<h3><%= link_to product.name, product %></h3>
+				<p><%= number_to_currency product.price %></p>
+			</div>
+		</div>
+		<% if (n+1)%3 == 0 %>
+			</div>
+			<div class="row">
+		<% end %>
+	<% end %>
+</div>
