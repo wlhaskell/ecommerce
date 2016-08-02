@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
-  get 'cart/add_to_cart'
+  post 'add_to_cart' => 'cart#add_to_cart'
 
-  get 'cart/view_order'
+  get 'view_order' => 'cart#view_order'
 
-  get 'cart/checkout'
+  post 'checkout' => 'cart#checkout'
 
   devise_for :users
   root 'storefront#all_items'

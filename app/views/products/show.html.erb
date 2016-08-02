@@ -34,5 +34,13 @@
   <%= image_tag @product.image.thumb.url, atl: 'product image' %>
 </p>
 
+<p>
+  <%= form_tag '/add_to_cart' do %>
+    <%= hidden_field_tag :product_id, @product.id %>
+    <%= number_field_tag :quantity, nil, placeholder: "How Many?" %><br>
+    <%= submit_tag "But it!", class: "btn btn-danger" %>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', all_path %>
